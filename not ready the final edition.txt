@@ -3,56 +3,68 @@
 
 Why Linux is not ready for the desktop, the final edition
 
-The previous iteration of this article was too technical, too long and contained a lot of contentious points, thus I've long been thinking about completely rewriting it, and making it accessible for the not-technical folks and exposing the deeper core issues that still make Linux a questionable match for the modern desktop PC. The initial version, that was written more than a decade ago first, was quite popular but nowadays this web page barely receives any impressions because the PC has more or less become obsolete: most people in the world do everything on their smartphones. The PC has largley been relagated to businesses, professionals, hardcore PC gamers and PC afiscinadoes.
+The previous iteration of this article was too technical, too long, and contained a lot of controversial points, so I've been thinking for a long time about rewriting it completely, making it accessible to the non-technical folks, and exposing the deeper core issues that still make Linux a questionable match for the modern desktop PC. The first version, written more than a decade ago, was quite popular, but today this site gets very few hits because the PC is more or less obsolete: most people in the world do everything on their smartphones. The PC has largely been relegated to businesses, professionals, hardcore PC gamers and PC afiscinadoes.
 
-Again, I want to make one thing clear: Linux may actually work for your use case, specially if the said use case is concentrated around using your computer as a web client. Fire up Firefox or Chrome and you're good to go (of course if you're lucky enough and hardware video acceleration works on your system which is still an issue in 2024, almost two decades after Windows got its video acceleration working nearly flawlessly).
+Again, as in the old article, I want to make one thing clear: Linux can actually work for your use case, especially if that use case focuses on using your computer as a web client. Fire up Firefox or Chrome and you're good to go (of course, if you're lucky enough to have hardware video acceleration working on your system, which is still an issue in 2024, almost two decades after Windows got its video acceleration working almost flawlessly).
 
-Just to make things clear, this article is about Linux distros, not specifically about the Linux kernel. The Linux kernel itself is useless without applications running on top of it.
+Just to be clear, this article is about Linux distributions, not specifically the Linux kernel. The Linux kernel itself is useless without applications to run on it.
 
-So, let's go through the list of the core issues that are unlikely to be ever solved unless someone invests north of a billion dollars into Linux:
+So, let's go through the list of the core issues that are unlikely to be ever solved unless someone invests north of a billion dollars in Linux:
 
 1. Linux is not an operating system
 
-When you're talking about an operating system, you're thinking about some core operating system that has a metric ton of software and that software may work regardless of the version of your OS. As an example, Windows or Android software from ten years ago continues to work in Windows 11 or Android 15, or whatever their current versions are. With Windows software compatibility is actually stellar: a lot of 32bit Windows 95 software still runs perfectly on Windows 11 64 almost 30 years later. Nothing remotely close exists for Linux.
+When you talk about an operating system, you're thinking about a core operating system that has a ton of software, and that software can work regardless of the version of your operating system. For example, Windows or Android software from ten years ago will still work in Windows 11 or Android 15 or whatever their current versions are. For Windows, software compatibility is actually excellent: a lot of 32-bit Windows 95 software still runs perfectly on Windows 11 64 almost 30 years later. Nothing remotely close exists for Linux.
 
-That's not the case for Linux distros. For Linux distros the preferred way of distributing software is compiling it for each release of the OS. It's not guaranteed and it's more often the case than not, that software from the long past will simply not run in your current Linux distro.
+That's not the case with Linux distributions. For Linux distros, the preferred way to distribute software is to compile it for each release of the OS. It's not guaranteed, and more often than not, software from the distant past simply won't run in your current Linux distribution.
 
-What's ever worse is that software compiled for the current version Linux X will not necesserily work for the current version Linux Y. Linux distros insist that all the software must be compiled for their current releases or provided as source code. The problem with source code is that normal users will not bother compiling anything, and secondly it's not always possible to compile software because it may depend on a specific compiler or dependendacies that your your distro doesn't provide. As for distros, they need to employ maintainers willing to support the said software and if no one steps up, you will not find the software that you're interested in in your distro.
+What's worse is that software compiled for the current version of Linux X will not necessarily work for the current version of Linux Y. Linux distros insist that all the software must be compiled for their current releases or provided as source code. The problem with source code is that normal users won't bother to compile anything, and secondly, it's not always possible to compile software because it may depend on a specific compiler or dependencies that your distro doesn't provide. As for distros, they have to employ maintainers who are willing to support said software, and if no one steps up, you won't find the software you're interested in in your distro.
 
-Savvy users of this article will however notice that Linux offers Flatpaks, Snaps and AppImages. I'm not gonna retell an insightful opus about their deficiencies and instead I'll just put it bluntly: these are all lightweight virtual machines. It's insane to think that they solve software incompatibility in Linux, they just circumvent it by making the user allocate and run gobbles of binary code, thus straining their storage, CPU and RAM unnecesserily. What's worse you can equally well run those under Windows' WSL. What's the point of having Linux installed on your computer then?
+However, savvy readers of this article will notice that Linux offers flatpaks, snaps, and AppImages. I'm not going to write an insightful treatise on their shortcomings, so I'll just say it bluntly: these are all lightweight virtual machines. It's crazy to think that they solve software incompatibility in Linux, they just work around it by making the user allocate and run gobs of binary code, unnecessarily taxing their storage, CPU and RAM. What's worse, you can just as easily run them under Windows' WSL. So what's the point of having Linux installed on your computer in the first place?
 
-In other words every Linux distro is a separate operating system. And when it comes to choosing one, which one should the average user choose? No one will tell you or there will be countless debates which one is "better".
+In other words, each Linux distribution is a separate operating system. And when it comes to choosing one, which one should the average user choose? Nobody will tell you, and there will be countless debates about which one is "better" or "proper".
 
 2. QA/QC, bugs and regressions
 
-You don't have to understand or know all the words above but the core issue is that Linux is in a constant state of flux. Regressions are introduced all the time because Linux developers spend very little to no time checking that their code changes don't result in regressions or breakages outside of the issues that they are trying to fix or features they are implementing.
+You don't need to understand or know all the words above but the core issue is that Linux is in a constant state of flux. Regressions are introduced all the time because Linux developers spend very little to no time checking that their code changes don't cause regressions or breakages outside of the problems they're trying to fix or features they're implementing.
 
-Not only that Linux kernel developers often don't have access to all the hardware devices that they are working on, thus changes to one device may affect a whole different one that the developer couldn't get their hands on. You can go check AMD GPU bug tracker and you will find this testimony from AMD developers: "Sorry, we don't have this hardware, could you test this patch?"
+Not only that, but Linux kernel developers often don't have access to all the hardware devices they're working on, so changes to one device may affect a whole other device that the developer didn't get their hands on. You can go to the AMD GPU bug tracker and you will find this statement from AMD developers: "Sorry, we don't have that hardware, could you test this patch?"
 
-This affects multiple Linux components starting from the Linux kernel, ending with MESA (an interface between graphics cards and your OS) and even your desktop environment.
+This affects multiple Linux components, from the Linux kernel to MESA (an interface between graphics cards and your operating system) and even your desktop environment.
 
 3. Lack of general software and games
 
-The vast majority of applications exist only for Windows, and speaking of games, Linux has not seen AAA titles in many years now, as there's simply much smaller userbase, aside from CS2 whose Vulkan Linux port works a lot worse than its native Windows version. Also, despite millions of gamers, it's hard to call CS2 an AAA title because it's based on Direct3D 11 (which is now more than a decade old) and doesn't feature any modern lighting techniques such as ray-tracing.
+The vast majority of applications exist only for Windows, and speaking of games, Linux hasn't seen any AAA titles for many years now, as the userbase is simply much smaller, aside from CS2, whose Vulkan Linux port works much worse than its native Windows version. Also, despite millions of players, it's hard to call CS2 an AAA title because it's based on Direct3D 11 (which is now more than a decade old) and lacks modern lighting techniques like ray tracing.
 
-And if you're a Windows user you can run pretty much all Linux applications without too many issues.
+And if you're a Windows user, you can run just about any Linux application without too many problems.
 
 4. Poor file and folder sharing situation on the local network
 
-Linux doesn't offer a native technology similar to Windows file sharing that is easily configurable, discoverable, encrypted and password protected. What exists in Linux, Samba, is quite painful to set up shared folders, even more so in distros using SeLinux (advanced security mechanism), create users, assign and change passwords and not worry about folders permissions.
+Linux doesn't offer a native technology similar to Windows file sharing that is easily configurable, discoverable, encrypted and password protected. What does exist in Linux, Samba, is quite painful to set up shared folders, even more so in distros that use SeLinux (advanced security mechanism), create users, assign and change passwords, and not worry about folder permissions.
 
 5. Lack of funding
 
-Countless software tiles in Linux have a vast number of bugs and missing features. That's due to the fact that Linux on the desktop is severly underfunded. While on the server Linux is unrivalled and has been the most popular OS in the world for over two decades, when it comes to the desktop, the situation is quite dim.
+Countless software tiles in Linux have a huge number of bugs and missing features. That's because Linux is severely underfunded on the desktop. While Linux is unrivaled on servers and has been the world's most popular operating system for over two decades, the situation on the desktop is quite bleak.
 
-6. Hardware compatibility
+6. Hardware support and compatibility
 
-Especially when it comes to brand new hardware, you may face the following components Wi-Fi network card, webcam, sound and even keyboard on your laptop not working. That's due to the fact that in Windows there's a stable driver API (programming interface), so OEMs can release drivers and have them working from day one, in Linux hardware enablement depends on the version of the kernel that you're running.
+Especially when it comes to brand new hardware, you may find that your laptop's Wi-Fi network card, webcam, sound, and even keyboard do not work. This is due to the fact that in Windows there is a stable driver API (application programming interface) and ABI (application binary interface), so OEMs can release drivers and have them work from day one, whereas in Linux hardware support depends on the version of the kernel you're running. Sometimes it takes months or even years for Linux to support your hardware.
 
-The second huge issue is that OEMs have 10 to 100 times fewer people working on Linux drivers than on their Windows drivers. That means certain bugs may persist for months, years or indefinitely because the respective programmers simply have higher priority issues to work on.
+The second big problem is that OEMs have 10 to 100 times fewer people working on Linux drivers than on their Windows drivers. This means that certain bugs can persist for months, years, or indefinitely, because those programmers simply have higher priority issues to work on.
 
-The third issue is that those programmers are simply not enough to make sure that all the changes that they make to the codebase are bug-free.
+The third problem is that there are simply not enough programmers to ensure that all the changes they make to the codebase are bug-free.
 
-Lastly, since drivers in Linux are generally part of the kernel (there are a few exceptions including NVIDIA), you cannot upgrade them to the latest version or downgrade them to the version that worked for you on the fly. You need to boot into a different kernel. That's extremely inconvenient and is not always possible.
+Finally, since drivers in Linux are generally part of the kernel (there are a few exceptions, including NVIDIA), you cannot upgrade them to the latest version or downgrade them to the version that worked for you on the fly. You have to boot into a different kernel. This is extremely inconvenient and not always possible.
 
-A very technical version of this list exists in this article: Major Linux Problems on the Desktop, 2023 edition
+7. The Linux community
+
+You will have problems with Linux, I can promise you that. And once you start looking for people to answer your questions, you'll see the real face of the Linux community. In my entire Internet life, over 25 years, I have never dealt with such a hateful, venomous and irrational bunch of lunatics.
+
+Here are the "answers" you're most likely to get given your questions:
+ * You're using the wrong Linux distribution
+ * You have the wrong hardware
+ * You're using Linux incorrectly
+ * You're asking for too much
+ * Go debug or fix it yourself.
+
+
+For a very technical version of this list, see this article: Major Linux Problems on the Desktop, 2023 edition
