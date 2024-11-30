@@ -1,6 +1,3 @@
-2024-11-09 16:40
-2024-11-14 18:53
-
 Why Linux is not ready for the desktop, the final edition
 
 The previous iteration of this article was too technical, too long, and contained a lot of controversial points, so I've been thinking for a long time about rewriting it completely, making it accessible to the non-technical folks, and exposing the deeper core issues that still make Linux a questionable match for the modern desktop PC. The first version, written more than a decade ago, was quite popular, but today this site gets very few hits because the PC is more or less obsolete: most people in the world do everything on their smartphones. The PC has largely been relegated to businesses, professionals, hardcore PC gamers and PC afiscinadoes.
@@ -68,3 +65,5 @@ Here are the "answers" you're most likely to get given your questions:
 
 
 For a very technical version of this list, see this article: Major Linux Problems on the Desktop, 2023 edition
+
+© 2024 Artem S. Tashkinov - all rights reserved. You can reproduce any part of this text verbatim, but you must retain the authorship and provide a link to this document.
